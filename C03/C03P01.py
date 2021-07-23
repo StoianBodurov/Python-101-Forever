@@ -26,49 +26,49 @@ class Interval:
             end_symbol = ')'
 
         return f'{start_symbol}{self.start}, {self.end}{end_symbol}'
-
-
-closed_interval = Interval(1, 10)
-
-result = [closed_interval.is_inside(1) is True,
-          closed_interval.is_inside(5) is True,
-          closed_interval.is_inside(10) is True,
-
-          closed_interval.stringify() == "[1, 10]", ]
-
-for r in result:
-    print(r)
-
-closed_interval = Interval(1, 10, start_opened=True, end_opened=True)
-
-result_1 = [closed_interval.is_inside(1) is False,
-            closed_interval.is_inside(5) is True,
-            closed_interval.is_inside(10) is False,
-
-            closed_interval.stringify() == "(1, 10)", ]
-
-for r in result_1:
-    print(r)
-
-half_opened_interval = Interval(1, 10, start_opened=False, end_opened=True)
-
-result_2 = [half_opened_interval.is_inside(1) is True,
-            half_opened_interval.is_inside(5) is True,
-            half_opened_interval.is_inside(10) is False,
-
-            half_opened_interval.stringify() == "[1, 10)", ]
-
-for r in result_2:
-    print(r)
-
-half_opened_interval = Interval(1, 10, start_opened=True, end_opened=False)
-
-result_3 = [half_opened_interval.is_inside(1) is False,
-            half_opened_interval.is_inside(5) is True,
-            half_opened_interval.is_inside(10) is True,
-
-            half_opened_interval.stringify() == "(1, 10]", ]
-
-
-for r in result_3:
-    print(r)
+#
+#
+# closed_interval = Interval(1, 10)
+#
+# result = [closed_interval.is_inside(1) is True,
+#           closed_interval.is_inside(5) is True,
+#           closed_interval.is_inside(10) is True,
+#
+#           closed_interval.stringify() == "[1, 10]", ]
+#
+# for r in result:
+#     print(r)
+#
+# closed_interval = Interval(1, 10, start_opened=True, end_opened=True)
+#
+# result_1 = [closed_interval.is_inside(1) is False,
+#             closed_interval.is_inside(5) is True,
+#             closed_interval.is_inside(10) is False,
+#
+#             closed_interval.stringify() == "(1, 10)", ]
+#
+# for r in result_1:
+#     print(r)
+#
+# half_opened_interval = Interval(1, 10, start_opened=False, end_opened=True)
+#
+# result_2 = [half_opened_interval.is_inside(1) is True,
+#             half_opened_interval.is_inside(5) is True,
+#             half_opened_interval.is_inside(10) is False,
+#
+#             half_opened_interval.stringify() == "[1, 10)", ]
+#
+# for r in result_2:
+#     print(r)
+#
+# half_opened_interval = Interval(1, 10, start_opened=True, end_opened=False)
+#
+# result_3 = [half_opened_interval.is_inside(1) is False,
+#             half_opened_interval.is_inside(5) is True,
+#             half_opened_interval.is_inside(10) is True,
+#
+#             half_opened_interval.stringify() == "(1, 10]", ]
+#
+#
+# for r in result_3:
+#     print(r)
